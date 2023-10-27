@@ -1,8 +1,8 @@
 /*
 Consume mouse events for apps where I'm learning the keyboard shortcuts.
 
-    clang -o no-clicky no-clicky.m -framework Cocoa
-    sudo ./no-clicky
+    clang -o mouseblind mouseblind.m -framework Cocoa
+    sudo ./mouseblind
 */
 
 #include <stdio.h>
