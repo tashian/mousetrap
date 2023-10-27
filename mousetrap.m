@@ -1,8 +1,7 @@
 /*
+🪤 by Carl Tashian
 Consume mouse events for apps where I'm learning the keyboard shortcuts.
-
-    clang -o mouseblind mouseblind.m -framework Cocoa
-    sudo ./mouseblind
+Change the list of blockedApps below to your liking!
 */
 
 #include <stdio.h>
@@ -31,11 +30,11 @@ static CGEventRef mouseClickCB(CGEventTapProxy proxy, CGEventType type, CGEventR
 
 int main(int argc, const char * argv[]) {
     CGEventMask eventMask = CGEventMaskBit(kCGEventLeftMouseDown);
-    NSArray *blockedApps = @[@"Linear", @"Notion"];
+    NSArray *blockedApps = @[@"Linear", @"Slack"];
 
     eventTap = CGEventTapCreate(kCGSessionEventTap, kCGHeadInsertEventTap, 0, eventMask, mouseClickCB, NULL);
     if(!eventTap) {
-        fprintf(stderr, "Failed to create event tap.\n");
+        fprintf(stderr, "🐭 Failed to create event tap.\n");
         fprintf(stderr, "Run this via sudo and give your Terminal app Accessibility privileges\n");
         return 1;
     }
@@ -44,7 +43,8 @@ int main(int argc, const char * argv[]) {
     CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, kCFRunLoopCommonModes);
     CGEventTapEnable(eventTap, true);
 
-    printf("The following apps are blocked: ");
+    printf("🪤 mousetrap 0.0.1\n");
+    printf("⛔️ The following apps are blocked: ");
     for (NSString *string in blockedApps) {
         printf("%s ", [string UTF8String]);
     }
