@@ -1,4 +1,4 @@
-## 🐭 Mousetrap 
+## 🐭  Mousetrap 
 
 Trying to master the keyboard shortcuts in your favorite app?
 Use Mousetrap to selectively disable the mouse when that app is active.
