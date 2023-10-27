@@ -3,7 +3,7 @@
 Trying to master the keyboard shortcuts in your favorite app?  
 Use Mousetrap to selectively disable the mouse when that app is active.
 
-Note: This is a command-line app until I have time to make it a Proper Menubar App.
+Note: This is a command-line app until someone takes the time to make it a Proper Menubar App.
 
 To build 🪤:
 
