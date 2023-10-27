@@ -17,7 +17,7 @@ To run 🪤:
 
 `sudo ./mousetrap`
 
-Note that you will need to give this app accessibility privilieges.
+You will need to give this app accessibility privileges.
 
 Have fun.
 
